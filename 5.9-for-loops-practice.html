@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>For Loop Algorithms</title>
+</head>
+
+<body>
+    <section>
+        <h1>For Loop Algorithms</h1>
+        <p>Write a function taht prompts the user to enter two numner and then find the sumn of all the numbers from the
+            first number to he second number.
+            <b>Example Output</b>: If the user enters 5 and 10, the function will print: 5 + 6 + 7 + 8 + 9 + 10 = 45
+        </p>
+        <p id="p1-output">Output will appear here</p>
+        <input id="p1-num1" type="number" placeholder="Enter 1st number">
+        <input id="p1-num2" type="number" placeholder="Enter 2nd number">
+        <button onclick="problem1()">Add numbers</button>
+        <script>
+            function problem1() {
+                // Get user numbers into variebles
+                var num1 = parseInt(document.getElementById("p1-num1").value);
+                var num2 = parseInt(document.getElementById("p1-num2").value);
+                // variable to hold the sum
+                var sum = 0;
+                // var to hold output paragraph
+                var p = document.getElementById("p1-output")
+                p.innerHTML = "";
+                // Use a for loop to add the number and update output paragraph 
+                for (var i = num1; i < num2; i++) {
+                    sum += i;
+                    p.innerHTML += i + "+ "
+                }
+                sum += num2;
+                p.innerHTML += num2 + " = " + sum
+
+            }
+        </script>
+    </section>
+
+    <section>
+        <h2>Problem 2</h2>
+        <p>Write a function that prompts the user for a number and them draws that number of "fence posts" that look
+            like |--|. The samllest number of fence posts is two. Fences like this should no be produced: |-- or --|--|
+            <br><b>Example Output:</b> If the user enters 5, the function will print |--|--|--|--|
+        </p>
+        <p id="p2-output">Output will appear here</p>
+        <input id="p2-num1" type="number" placeholder="Enter a number of posts">
+        <button onclick="problem2()">Draw fence</button>
+        <script>
+            function problem2() {
+                var numFences = parseInt(document.getElementById("p2-num1").value);
+                var p = document.getElementById("p2-output");
+
+                for (var i = 0; i < numFences - 1; i++) {
+                    p.innerHTML += "|--" + "|";
+                }
+                
+            }
+        </script>
+    </section>
+</body>
+
+</html>

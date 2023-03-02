@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>5.10 Random Numbers</title>
+</head>
+
+<body>
+
+    <h1>5.10 Random Numbers</h1>
+    <section>
+        <h2>Notes</h2>
+        <p><b>Random number</b> are useful in software devlopment for many reasons-game mechanics generating
+            usernames/passwrods, anytime you need something seemingly unpredictable</p>
+        <p><b>Pseudo-random numbers</b>- computers are just big calculators solving formulas and can't create truly
+            random number, but instead formulas use an algorithm the generates numbers that seem random</p>
+        <h3>Randon Numbers in JS</h3>
+        <li><code>math.random()</code> is a function that returns a psuedo-random number between 0 and 1, not including
+            1</li>
+        <li><code>math.floor</code> is a funtion taht takes a decimal number and rounds it down-chops off the decimal
+            part</li>
+        <button onclick="alert(Math.random())">Test <code>Math.ranodm</code></button>
+        <button onclick="alert(Math.floor(3.14159))">Test <code>Math.floor</code></button>
+
+        <h3>Random Number Calculations</h3>
+        <p>To produce a random integer from a min value to a max value (including the min and max) use this calculation
+        </p>
+        <p><code>Math.floor(Math.random() * (max + 1 )) + min</code></p>
+        <p><b><u>Example</u></b></p>
+        <p>Generate a random number from 2 to 10 and store it in a variable</p>
+        <p><code>var ramdNum = Math.floor(Math.random() * 11) + 1;</code></p>
+        <button onclick="example()">Generate random number 1 to 10</button>
+        <script>
+            function example() {
+                var randNum = Math.floor(Math.random() * 10) + 1;
+                alert(randNum);
+            }
+        </script>
+    </section>
+
+    <section>
+        <h3>Roll a Die</h3>
+        <button onclick="alert('Rolling 6 sided die ... ' +  Math.floor(Math.random() * 6 + 1))">Roll Die</button>
+    </section>
+</body>
+
+</html>
