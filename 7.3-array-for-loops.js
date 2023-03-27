@@ -61,11 +61,17 @@ function problem2(){
 function problem3(){
   console.log("Problem 3 output below");
   var arr = [1, 2, 3, 4,];
-  var doubledArr = doubleList(arr)
-  console.log(doubledArr)
+  var result = doubleList(arr);
+  console.log(result);
 }
-function doubleList (){
-  
+function doubleList (arr){
+ var result = [];
+ for (var i = 0; i < arr.length; i++){
+  var val = arr[i];
+  rusult.push(val);
+  rusult.push(val);
+ } 
+ return result;
 }
 
 
