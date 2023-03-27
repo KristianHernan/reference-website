@@ -36,7 +36,7 @@ function problem1(){
  var lastItem = daysOfWeek.pop();
  var lastItem = daysOfWeek.pop();
  var weekend = [];
- weekend.push("Saturday", "Sunday")
+ weekend.push("Saturday");
  console.log(weekend);
  printDays();
  console.log(weekend[0]);
