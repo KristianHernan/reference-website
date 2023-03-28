@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7.5 Search Algorithms</title>
+</head>
+
+<body>
+  <h1>7.5 Search Algorithms</h1>
+  <section>
+    <h2>Objectives</h2>
+    <p>
+      To develop and write linear and binary search algorithms with guidance<br>
+      To be able to describe the efficiency of an algorithm using "Big O" notation
+    </p>
+  </section>
+
+  <section>
+    <h2>Notes</h2>
+    <h3>Search Algorithms</h3>
+    <p>
+      Algorithim steps 
+
+      1. Get array and target values
+
+      2. set a counter to i=0
+
+      3. Ceck if the element at arr[i] is equal to the target value
+
+      4. if elemnt mathes, return index (i). Otherwise, increment i by 1 and repeat step 3
+
+      5. if the index is greater than the last index of the array, return -1 to indicate the target value was not found.
+ 
+    </p>
+
+    <h3>Linear Search Algorithm</h3>
+    <p>
+      Algorithim steps 
+
+      1. Get array and target values
+
+      2. set a counter to i=0
+
+      3. Ceck if the element at arr[i] is equal to the target value
+
+      4. if elemnt mathes, return index (i). Otherwise, increment i by 1 and repeat step 3
+
+      5. if the index is greater than the last index of the array, return -1 to indicate the target value was not found.
+    </p>
+
+    <h3>Binary Search Algorithm</h3>
+    <p>
+      Sort the array in ascending order
+Set the low index to 0 and high index to length – 1
+Set the middle index to the average of the low and high indices
+If the middle index is the target, return the middle index
+If the target element is less than the element at the middle index, set the high index to the middle index – 1
+If the target element is greater than the element at the middle index, set the low index to the middle index + 1
+Repeat steps 3-6 until it is found, or the low and high index are equal in which case, the target is not in the array
+
+    </p>
+    O(n) means that that maximum number of steps it will take to find an element in an array is equal to the number of elements in the array
+
+    <h3>Algorithm Efficiency</h3>
+    <p>
+
+    </p>
+  </section>
+</body>
+<script src="7.5-search-algorithms.js"></script>
+
+</html>
